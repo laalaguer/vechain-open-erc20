@@ -1,6 +1,4 @@
-# This script only deploys VVET smart contract.
-# Usually costs 691 VTHO.
-# Inputs: network url, json file, deployer wallet
+''' This script deploys ERC20 type contracts on VeChain '''
 import sys
 from thor_requests.connect import Connect
 from thor_requests.wallet import Wallet
