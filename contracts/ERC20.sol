@@ -37,10 +37,12 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
     uint256 private _totalSupply;
     string private _name;
     string private _symbol;
+    uint8 private _decimals;
 
-    constructor (string memory name_, string memory symbol_) {
+    constructor (string memory name_, string memory symbol_, uint8 decimals_) {
         _name = name_;
         _symbol = symbol_;
+        _decimals = decimals_;
     }
 
     function name() public view virtual override returns (string memory) {
@@ -52,7 +54,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
     }
 
     function decimals() public view virtual override returns (uint8) {
-        return 18;
+        return _decimals;
     }
 
     function totalSupply() public view virtual override returns (uint256) {

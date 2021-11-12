@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
 
 import "./ERC20.sol";
 
-contract GTR is ERC20("GanTangRen", "GTR", 18) {
+contract TokenB is ERC20("TokenB", "TKB", 18) {
     constructor() public {
         _mint(msg.sender, 1000000000000 * 10 ** 18);
     }
